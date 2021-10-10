@@ -12,6 +12,8 @@ import reportWebVitals from './reportWebVitals';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import rootReducer from './reducers';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 // set store
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)))
 // applyMidleware 2nd argument pass in thunk

@@ -6,6 +6,10 @@ import { fetchCategory } from './actions/fetchCategory';
 import { connect } from 'react-redux'
 
 
+import Navigation from './components/navigation';
+
+
+
 class App extends React.Component {
 
 
@@ -15,12 +19,13 @@ class App extends React.Component {
 
   
   render() {
-    const cat = this.props.cats.map(cate => cate.name)
+    
     console.log(this.props.cats)
     return (
       <div className="App">
+        <Navigation/>
         <ul>
-          <li>asdf{cat}</li>
+          <li>asdf</li>
         </ul>
       </div>
     )

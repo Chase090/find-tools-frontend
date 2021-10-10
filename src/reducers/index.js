@@ -1,4 +1,4 @@
-import { combineReducers } from 'react'
+import { combineReducers } from 'redux'
 
 import { toolsReducer } from './ToolsReducer'
 import { categoryReducer } from './categoryReducer'
@@ -9,3 +9,5 @@ const rootReducer = combineReducers({
 })
 
 export default rootReducer
+
+
