@@ -2,7 +2,7 @@ import React from "react";
 
 import { connect } from "react-redux";
 import { fetchTools } from "../actions/ToolsActions";
-
+import Tool from "../components/toolsComponents.js/tool";
 
 class ToolsContainer extends React.Component{
 
@@ -11,13 +11,25 @@ class ToolsContainer extends React.Component{
     }
 
     renderTools() {
-        return this.props.tools
+        return this.props.tools.map(t => {
+            return <Tool
+                key={t.id}
+                id={t.id}
+                price={t.price}      
+                available={t.available} 
+                category_id={t.category_id} 
+                details={t.details} 
+                name={t.name} 
+            />
+        })
     }
 
     render() {
-        console.log("this is props.toolscontainer",this.props.tools)
+        // console.log("this is props.toolscontainer",this.props.tools)
         return(
-            <></>
+            <>
+                {this.renderTools()}
+            </>
         )
     }
 
@@ -25,7 +37,7 @@ class ToolsContainer extends React.Component{
 
 
 const mapStateToProps = (state) => {
-    console.log(state.tools)
+    
         return{
             tools: state.tools.tools
         }

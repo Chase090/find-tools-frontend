@@ -15,7 +15,7 @@ export const fetchTools = () => {
                 return toolsArray.push({...tool.attributes, id: tool.id})
                 
             })
-            console.log("coming from tools",toolsArray)
+            console.log("coming from toolsfetchaction",toolsArray)
             dispatch(loadTools(toolsArray))
         })
     }
