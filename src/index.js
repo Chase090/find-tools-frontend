@@ -10,9 +10,10 @@ import { categoryReducer } from './reducers/categoryReducer';
 
 import reportWebVitals from './reportWebVitals';
 import { composeWithDevTools } from 'redux-devtools-extension';
+import rootReducer from './reducers';
 
 // set store
-const store = createStore(categoryReducer, composeWithDevTools(applyMiddleware(thunk)))
+const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)))
 // applyMidleware 2nd argument pass in thunk
 
 ReactDOM.render(
