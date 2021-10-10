@@ -1,7 +1,7 @@
 import React from "react";
 
 import { connect } from "react-redux";
-import { fetchTools } from "../actions/ToolsActions";
+import { fetchTools, toolsMarkedUnavaliable } from "../actions/ToolsActions";
 import ToolCard from "../components/toolsComponents.js/toolCard";
 
 class ToolsContainer extends React.Component{
@@ -12,6 +12,10 @@ class ToolsContainer extends React.Component{
 
     handleMarkedTool = (id) => {
         // function will have id as an arg wich will be matched against the propstools
+        const matchedTool = this.props.tools.find(tool => tool.id === id)
+        const newlyEdited = {...matchedTool, available: matchedTool.available === 0}
+
+        this.props.toolsMarkedUnavaliable(newlyEdited)
         
         // pass this function as a props to Toolcard for use of the button,
         // when clicked will move the tool to marked,
@@ -28,7 +32,8 @@ class ToolsContainer extends React.Component{
                 available={t.available} 
                 category_id={t.category_id} 
                 details={t.details} 
-                name={t.name} 
+                name={t.name}
+                handleMarkedTool={this.handleMarkedTool} 
             />
         })
     }
@@ -51,4 +56,4 @@ const mapStateToProps = (state) => {
             tools: state.tools.tools
         }
     }
-export default connect (mapStateToProps, {fetchTools})(ToolsContainer)
+export default connect (mapStateToProps, {fetchTools, toolsMarkedUnavaliable})(ToolsContainer)

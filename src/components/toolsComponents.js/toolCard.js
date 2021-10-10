@@ -14,7 +14,7 @@ const ToolCard = (props) => {
             <p>{props.id}</p> 
             <p>{props.id}</p> 
             <p>{props.id}</p>
-            <Button variant="primary" size="sm">Rent!</Button>
+            <Button onClick={() => props.handleMarkedTool(props.id)} variant="primary" size="sm">Rent!</Button>
         </div>
     )
 }

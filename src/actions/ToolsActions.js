@@ -13,7 +13,7 @@ export const fetchTools = () => {
             const toolsArray = []
 
             tools.map(tool => {
-                return toolsArray.push({...tool.attributes, id: tool.id})
+                return toolsArray.push({...tool.attributes, id: parseInt(tool.id)})
                 
             })
             console.log("coming from toolsfetchaction",toolsArray)
@@ -37,7 +37,10 @@ export const toolsMarkedUnavaliable = (tool) => {
         .then(resp => resp.json())
         .then(data => {
             const tool = data.data
-            console.log(tool)
+            const cheese = {id: parseInt(tool.id), ...tool.attributes}
+
+            dispatch(updateAvailable(cheese))
+            // debugger
         })
     }
 }
