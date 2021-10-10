@@ -2,7 +2,7 @@ import React from "react";
 
 import { connect } from "react-redux";
 import { fetchTools } from "../actions/ToolsActions";
-import Tool from "../components/toolsComponents.js/tool";
+import ToolCard from "../components/toolsComponents.js/toolCard";
 
 class ToolsContainer extends React.Component{
 
@@ -10,9 +10,16 @@ class ToolsContainer extends React.Component{
         this.props.fetchTools()
     }
 
+    markedToRent(){
+        // pass this function as a props to Toolcard for use of the button,
+        // when clicked will move the tool to marked,
+        // from marked, when user is done with the tool, user would have a button to delete
+        // delete action will be triggered dispatched to reducer then will delete the tool from db
+    }
+
     renderTools() {
         return this.props.tools.map(t => {
-            return <Tool
+            return <ToolCard
                 key={t.id}
                 id={t.id}
                 price={t.price}      
