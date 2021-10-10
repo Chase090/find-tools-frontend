@@ -10,6 +10,13 @@ import Navigation from './components/navigation';
 import Home from './components/home';
 import ToolsContainer from './containers/ToolsContainer';
 
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import MarkedContainer from './containers/markedContainer';
+
 
 
 class App extends React.Component {
@@ -23,9 +30,23 @@ class App extends React.Component {
     // console.log(this.props.cats)
     return (
       <div className="App">
-        <Navigation/>
-        <Home/>
-        <ToolsContainer/>
+        <Router>   
+            <Navigation /> 
+        
+          <Switch>
+            <Route exact path= "/marked">
+              <ToolsContainer />
+            </Route> 
+          </Switch>
+
+          <Switch>
+            <Route>
+              <Home />
+            </Route>
+          </Switch>
+                
+        </Router>
+    
         <ul>
           <li>asdf</li>
         </ul>

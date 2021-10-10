@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 
 import { toolsReducer } from './ToolsReducer'
-import { categoryReducer } from './categoryReducer'
+import { categoryReducer } from './CategoryReducer'
 
 const rootReducer = combineReducers({
     tools: toolsReducer, 

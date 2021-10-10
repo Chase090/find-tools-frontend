@@ -17,8 +17,6 @@ const ToolCard = (props) => {
             <Button variant="primary" size="sm">Rent!</Button>
         </div>
     )
-   
-
 }
 
 export default ToolCard

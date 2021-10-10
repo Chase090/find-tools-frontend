@@ -1,6 +1,7 @@
 const url = "http://localhost:3001/tools"
 
 export const loadTools = (tools) => ({type: "GET_TOOLS", payload: tools})
+export const updateAvailable = (updatedTool) => ({type: "UPDATE_TOOL", payload: updatedTool})
 
 
 export const fetchTools = () => {
@@ -17,6 +18,26 @@ export const fetchTools = () => {
             })
             console.log("coming from toolsfetchaction",toolsArray)
             dispatch(loadTools(toolsArray))
+        })
+    }
+}
+
+export const toolsMarkedUnavaliable = (tool) => {
+    return (dispatch) => {
+        const configObj = {
+            method: 'PATCH',
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json"
+            },
+            body: JSON.stringify(tool)
+        }
+
+        fetch(`${url}/${tool.id}`, configObj)
+        .then(resp => resp.json())
+        .then(data => {
+            const tool = data.data
+            console.log(tool)
         })
     }
 }

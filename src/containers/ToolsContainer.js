@@ -10,7 +10,9 @@ class ToolsContainer extends React.Component{
         this.props.fetchTools()
     }
 
-    markedToRent(){
+    handleMarkedTool = (id) => {
+        // function will have id as an arg wich will be matched against the propstools
+        
         // pass this function as a props to Toolcard for use of the button,
         // when clicked will move the tool to marked,
         // from marked, when user is done with the tool, user would have a button to delete

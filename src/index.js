@@ -6,7 +6,7 @@ import {createStore, applyMiddleware} from 'redux'
 import thunk from 'redux-thunk'
 import { Provider } from 'react-redux'
 
-import { categoryReducer } from './reducers/categoryReducer';
+import { categoryReducer } from './reducers/CategoryReducer';
 
 import reportWebVitals from './reportWebVitals';
 import { composeWithDevTools } from 'redux-devtools-extension';
