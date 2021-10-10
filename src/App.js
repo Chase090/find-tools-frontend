@@ -7,6 +7,7 @@ import { connect } from 'react-redux'
 
 
 import Navigation from './components/navigation';
+import Home from './components/home';
 
 
 
@@ -24,6 +25,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Navigation/>
+        <Home/>
         <ul>
           <li>asdf</li>
         </ul>
