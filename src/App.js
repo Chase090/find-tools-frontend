@@ -1,31 +1,31 @@
 import React from 'react';
 
 import './App.css';
-import { fetchCategory } from './actions/fetchCategory';
+import { fetchCategory } from './actions/CategoryActions';
 
 import { connect } from 'react-redux'
 
 
 import Navigation from './components/navigation';
 import Home from './components/home';
+import ToolsContainer from './containers/ToolsContainer';
 
 
 
 class App extends React.Component {
 
 
-  componentDidMount(){
-    this.props.fetchCategory()
-  }
+
 
   
   render() {
     
-    console.log(this.props.cats)
+    // console.log(this.props.cats)
     return (
       <div className="App">
         <Navigation/>
         <Home/>
+        <ToolsContainer/>
         <ul>
           <li>asdf</li>
         </ul>

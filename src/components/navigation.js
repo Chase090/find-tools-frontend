@@ -16,7 +16,7 @@ const Navigation = () => {
                     navbarScroll>
 
                     <Nav.Link href="#action1">Home</Nav.Link>
-                    <Nav.Link href="#action2">About</Nav.Link>
+                
              
                     
                     <Nav.Link href="#">Marked</Nav.Link>
