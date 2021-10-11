@@ -25,19 +25,23 @@ export const fetchTools = () => {
     }
 }
 
-
-export const toolsMarkedUnavaliable = (id) => {
+export const deletedTool = (id) => {
     return (dispatch) => {
-        const configObj = {
-            method: 'DELETE',
+        const configObj ={
+            method: "DELETE",
             headers: {
-                "Content-Type": "application/json",
-                Accept: "application/json"
+                'Content-Type': "application/json",
+                'Accepts': "application/json"
             },
+            
         }
-
-        fetch(`${url}/${id}`, configObj)
-        .then(resp => resp.json())
-        .then(data => dispatch(deleteTool(id)))
+         
+        fetch(`${url}/${id}`,configObj)
+            .then(res => res.json())
+            .then(json=> { debugger
+            dispatch(deleteTool(id))
+           
+            })
+        
     }
 }

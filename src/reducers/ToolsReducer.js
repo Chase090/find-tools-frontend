@@ -5,8 +5,8 @@ export function toolsReducer(state = {tools: []}, action) {
             return{...state, tools: action.payload}
 
         case "DELETE_TOOL":
-            const cheese =  state.tools.filter(tool => tool.id !== action.payload.id)        
-            return cheese
+            const cheese =  state.tools.filter(tool => tool.id !== action.payload)        
+            return{...state, tools: cheese}
 
         default:
             return state

@@ -18,10 +18,7 @@ const Navigation = () => {
                     navbarScroll>
 
                     <Nav.Link as={Link} to='/'>Home</Nav.Link>
-                    <Nav.Link as={Link} to='/tools'>Tools</Nav.Link>
-                
-             
-                    
+                    <Nav.Link as={Link} to='/new'>Create</Nav.Link>
                     <Nav.Link as={Link} to='/marked'>Marked</Nav.Link>
 
                 </Nav>
