@@ -18,6 +18,7 @@ const Navigation = () => {
                     navbarScroll>
 
                     <Nav.Link as={Link} to='/'>Home</Nav.Link>
+                    <Nav.Link as={Link} to='/tools'>Tools</Nav.Link>
                 
              
                     

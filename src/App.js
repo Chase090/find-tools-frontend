@@ -8,15 +8,16 @@ import { connect } from 'react-redux'
 
 import Navigation from './components/navigation';
 import Home from './components/home';
-import ToolsContainer from './containers/ToolsContainer';
 
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
-import MarkedContainer from './containers/markedContainer';
 
+
+import MarkedContainer from './containers/markedContainer';
+import ToolsContainer from './containers/ToolsContainer';
 
 
 class App extends React.Component {
@@ -35,6 +36,11 @@ class App extends React.Component {
         
           <Switch>
             <Route exact path= "/marked">
+              <MarkedContainer />
+            </Route> 
+          </Switch>
+          <Switch>
+            <Route exact path= "/tools">
               <ToolsContainer />
             </Route> 
           </Switch>

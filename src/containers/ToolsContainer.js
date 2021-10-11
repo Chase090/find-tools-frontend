@@ -24,6 +24,7 @@ class ToolsContainer extends React.Component{
     }
 
     renderTools() {
+        console.log()
         return this.props.tools.map(t => {
             return <ToolCard
                 key={t.id}
