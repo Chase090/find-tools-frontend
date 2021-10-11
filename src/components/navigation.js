@@ -3,7 +3,7 @@ import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 
-import Searchbox from "./searchbox";
+import SearchContainer from "../containers/SearchContainer";
 
 const Navigation = () => {
   return (  
@@ -23,7 +23,7 @@ const Navigation = () => {
 
                 </Nav>
 
-                    <Searchbox/>
+                    <SearchContainer/>
 
             </Navbar.Collapse>
         </Navbar>
