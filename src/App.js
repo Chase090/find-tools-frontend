@@ -16,7 +16,8 @@ import {
 } from "react-router-dom";
 
 
-import MarkedContainer from './containers/markedContainer';
+
+
 import ToolsContainer from './containers/ToolsContainer';
 
 
@@ -36,7 +37,7 @@ class App extends React.Component {
         
           <Switch>
             <Route exact path= "/marked">
-              <MarkedContainer />
+              
             </Route> 
           </Switch>
           <Switch>

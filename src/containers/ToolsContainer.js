@@ -34,10 +34,11 @@ class ToolsContainer extends React.Component{
                 category_id={t.category_id} 
                 details={t.details} 
                 name={t.name}
-                handleMarkedTool={this.handleMarkedTool} 
             />
         })
     }
+
+    
 
     render() {
         // console.log("this is props.toolscontainer",this.props.tools)
@@ -52,7 +53,6 @@ class ToolsContainer extends React.Component{
 
 
 const mapStateToProps = (state) => {
-    
         return{
             tools: state.tools.tools
         }

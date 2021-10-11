@@ -1,5 +1,8 @@
 import React from "react";
 import { Button } from "react-bootstrap";
+import { connect } from "react-redux";
+import { deleteTool } from "../../actions/ToolsActions";
+
 
 const ToolCard = (props) => {
     // console.log(props)
@@ -14,9 +17,9 @@ const ToolCard = (props) => {
             <p>{props.id}</p> 
             <p>{props.id}</p> 
             <p>{props.id}</p>
-            <Button onClick={() => props.handleMarkedTool(props.id)} variant="primary" size="sm">Rent!</Button>
+            <Button onClick={() => props.deleteTool(props.id)} variant="primary" size="sm">Rent!</Button>
         </div>
     )
 }
 
-export default ToolCard
+export default connect(null, {deleteTool})(ToolCard)
