@@ -38,7 +38,7 @@ export const deletedTool = (id) => {
          
         fetch(`${url}/${id}`,configObj)
             .then(res => res.json())
-            .then(json=> { debugger
+            .then(json=> {
             dispatch(deleteTool(id))
            
             })
