@@ -1,10 +1,14 @@
-import React from "react";
-import { Card, Button } from "react-bootstrap";
+import React, {useState} from "react";
+import { Modal, Card, Button } from "react-bootstrap";
 import { connect } from "react-redux";
 import { deletedTool } from "../../actions/ToolsActions";
 
 
 const ToolCard = (props) => {
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
     // console.log(props)
     return(
         <div>
@@ -17,10 +21,31 @@ const ToolCard = (props) => {
                     </Card.Text>
                </Card.Body>  
                ${props.price}
-                <Button onClick={() => props.deletedTool(props.id)} variant="primary" size="sm">Rent!</Button>
+                <Button onClick={handleShow} variant="primary" size="sm">Rent!</Button>
+
+                <Modal
+                show={show}
+                onHide={handleClose}
+                backdrop="static"
+                keyboard={false}
+                >
+                    <Modal.Header closeButton>
+                    <Modal.Title>Rent Out</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        Are you sure?
+                    </Modal.Body>
+                    <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>
+                        Close
+                    </Button>
+                    <Button onClick={() => props.deletedTool(props.id)} variant="primary">Proceed</Button>
+                    </Modal.Footer>
+                </Modal>
            </Card>  
         </div>
     )
 }
 
 export default connect(null, {deletedTool})(ToolCard)
+

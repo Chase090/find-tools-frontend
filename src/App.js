@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 // --------------
 import Navigation from './components/navigation';
-import ToolsContainer from './containers/ToolsContainer'
+import ToolsContainer from './containers/toolsContainer'
 import Home from './components/home';
 
 
@@ -37,9 +37,6 @@ class App extends React.Component {
                 {/* tools create form */}
               </Route>
 
-              <Route path="/marked">
-                {/* about page */}
-              </Route>
             </Switch>
           </div>
         </div>

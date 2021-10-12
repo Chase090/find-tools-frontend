@@ -2,9 +2,9 @@ import React from "react";
 import {Container} from "react-bootstrap";
 
 import { connect } from "react-redux";
-import { fetchTools } from "../actions/ToolsActions";
+import { fetchTools, toolsMarkedUnavaliable } from "../actions/ToolsActions";
 import ToolCard from "../components/toolsComponents.js/toolCard";
-import { Form, FormControl, Button } from 'react-bootstrap'
+import { Form, FormControl } from 'react-bootstrap'
 
 class ToolsContainer extends React.Component{
     
@@ -19,19 +19,18 @@ class ToolsContainer extends React.Component{
     }
    
 
-
     searchInput = (e) => {
         const searchTerm = e.target.value
         this.setState({query: searchTerm})
        
     }
 
-    
+
 
     renderFilteredOrRenderList() {
-        console.log(this.state.query)
-       if(this.state.query !== "") {
-       const toolsFiltered = this.props.tools.filter(tool => tool.name.toLowerCase().includes(this.state.query.toLowerCase()))
+
+        if(this.state.query !== "") {
+        const toolsFiltered = this.props.tools.filter(tool => tool.name.toLowerCase().includes(this.state.query.toLowerCase()))
 
             return toolsFiltered.map(t => {
                 return <ToolCard
@@ -42,10 +41,10 @@ class ToolsContainer extends React.Component{
                     category_id={t.category_id} 
                     details={t.details} 
                     name={t.name}
+                    handleRentButton={this.handleRentButton}
                     />
             })
         } else {
-            console.log(this.props)
             const tooList = this.props.tools
             return tooList.map(t => {
                 return <ToolCard
@@ -56,6 +55,7 @@ class ToolsContainer extends React.Component{
                     category_id={t.category_id} 
                     details={t.details} 
                     name={t.name}
+                    handleRentButton={this.handleRentButton}
                     />
             })
         }
