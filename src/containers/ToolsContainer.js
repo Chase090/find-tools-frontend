@@ -2,7 +2,7 @@ import React from "react";
 import {Container} from "react-bootstrap";
 
 import { connect } from "react-redux";
-import { fetchTools, toolsMarkedUnavaliable } from "../actions/ToolsActions";
+import { fetchTools } from "../actions/ToolsActions";
 import ToolCard from "../components/toolsComponents.js/toolCard";
 import { Form, FormControl } from 'react-bootstrap'
 

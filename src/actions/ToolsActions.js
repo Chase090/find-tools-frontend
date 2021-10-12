@@ -21,17 +21,32 @@ export const fetchTools = () => {
 }
 // --------------
 export const deletedTool = (id) => {
-    let configObj = {
-        method: 'DELETE',
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json',
-        }
-    }
-
-    return (dispatch) => {
-        fetch(url + `/${id}`, configObj)
-        .then(resp => resp.json())
-        .then(tool => dispatch(deleteTool(id)))
+    return dispatch =>{ 
+    fetch(url + `/${id}`, {
+        method: 'DELETE', 
+    })
+    dispatch(deleteTool(id))
     }
 }
+
+// export const toolsMarkedUnavaliable = (tool) => {
+//     return (dispatch) => {
+//         const configObj = {
+//             method: 'PATCH',
+//             headers: {
+//                 "Content-Type": "application/json",
+//                 Accept: "application/json"
+//             },
+//             body: JSON.stringify(tool)
+//         }
+
+//         fetch(`${url}/${tool.id}`, configObj)
+//         .then(resp => resp.json())
+//         .then(data => {
+//             const tool = data.data
+//             const cheese = {id: parseInt(tool.id), ...tool.attributes}
+
+//             dispatch(updateAvailable(cheese))
+//         })
+//     }
+// }
