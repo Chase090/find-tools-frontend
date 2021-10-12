@@ -20,11 +20,13 @@ class ToolsContainer extends React.Component{
    
 
 
-    filteredTools = (e) => {
+    searchInput = (e) => {
         const searchTerm = e.target.value
         this.setState({query: searchTerm})
        
     }
+
+    
 
     renderFilteredOrRenderList() {
         console.log(this.state.query)
@@ -67,7 +69,7 @@ class ToolsContainer extends React.Component{
             <>
                 <Form className="d-flex">
                     <FormControl
-                        onChange={(e) => this.filteredTools(e)}
+                        onChange={(e) => this.searchInput(e)}
                         type="search"
                         placeholder="Search"
                         className="mr-2"

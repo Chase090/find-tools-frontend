@@ -37,7 +37,7 @@ class App extends React.Component {
                 {/* tools create form */}
               </Route>
 
-              <Route path="/about">
+              <Route path="/marked">
                 {/* about page */}
               </Route>
             </Switch>
