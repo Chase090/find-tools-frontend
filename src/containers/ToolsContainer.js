@@ -67,19 +67,23 @@ class ToolsContainer extends React.Component{
     render() {
         return(
             <>
-                <Form className="d-flex">
-                    <FormControl
-                        onChange={(e) => this.searchInput(e)}
-                        type="search"
-                        placeholder="Search"
-                        className="mr-2"
-                        aria-label="Search"
-                    />
-                </Form>
-                
-                <Container>
-                    {this.renderFilteredOrRenderList()}
-                </Container>
+                <div className="search-bar">   
+                    <Form className="d-flex">
+                        <FormControl
+                            onChange={(e) => this.searchInput(e)}
+                            type="search"
+                            placeholder="Search"
+                            className="mr-2"
+                            aria-label="Search"
+                        />
+                    </Form>
+                </div>
+                    <br></br>
+                <div className="toolcard">
+                    <Container>
+                        {this.renderFilteredOrRenderList()}
+                    </Container>
+                </div>
             </>
         )
     }

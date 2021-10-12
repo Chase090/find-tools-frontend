@@ -10,7 +10,7 @@ import {
 import Navigation from './components/navigation';
 import ToolsContainer from './containers/toolsContainer'
 import Home from './components/home';
-
+import ToolsForm from './components/toolsComponents.js/toolForm';
 
 
 
@@ -34,7 +34,7 @@ class App extends React.Component {
               </Route>
 
               <Route path="/tools/new">
-                {/* tools create form */}
+         <ToolsForm />
               </Route>
 
             </Switch>
