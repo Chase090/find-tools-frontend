@@ -1,7 +1,9 @@
 const url = "http://localhost:3001/tools"
 
 export const loadTools = (tools) => ({type: "GET_TOOLS", payload: tools})
+
 export const deleteTool = (id) => ({type: "DELETE_TOOL", payload: id})
+
 export const addTool = (tool) => ({type: "CREATE_TOOL", payload: tool})
 
 
@@ -41,6 +43,6 @@ export const createTool = (tool) => {
 
        fetch(url, configobj)
        .then(res => res.json())
-       .then(data => console.log(data))
+       .then(data => {dispatch(addTool(data))})
     }
 }

@@ -14,8 +14,7 @@ class ToolsContainer extends React.Component{
     }
     
     state = {
-        query: "",
-        tools: []
+        query: ""
     }
    
 
