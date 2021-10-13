@@ -7,21 +7,11 @@ class ToolsForm extends React.Component{
 
 
     state = {
-        show: false,
         name: "",
         details: "",
         price: "",
         image_url: ""
     }
-
-    setShow(type){
-        this.setState({
-            ...this.state,
-            show: type
-        })
-    }
-
-    handleShow = () => {this.setShow}
 
     handleOnChange = (e) => {
         const name = e.target.name
@@ -35,11 +25,8 @@ class ToolsForm extends React.Component{
 
     handleOnSubmit = (event) => {
         event.preventDefault()
-        console.log("will add to db")
-        const tempState = {...this.state}
-        delete tempState.show;
 
-        this.props.createTool(tempState)
+        this.props.createTool(this.state)
        
         // then setState to empty
         this.setState({
