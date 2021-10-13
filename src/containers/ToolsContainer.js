@@ -28,6 +28,12 @@ class ToolsContainer extends React.Component{
     }
 
 
+    handleRentButton = (id) => {
+        const matched = this.props.tools.find(tool => tool.id === id)
+        
+    }
+
+
 
     renderFilteredOrRenderList() {
 // console.log(this.props.tools)
