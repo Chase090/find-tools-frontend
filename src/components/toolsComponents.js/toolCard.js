@@ -11,12 +11,12 @@ const ToolCard = (props) => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    
+
     return(
         <div>
-            <Row>
+            <Row xs={1} md={2} className="g-4">
                 <Col>
-                    <Card>
+                    <Card style={{ width: '18rem' }}>
                         <Card.Body>
                         <Card.Img variant="top" src={props.img_url} />
                             <Card.Title>{props.name}</Card.Title>
@@ -30,7 +30,8 @@ const ToolCard = (props) => {
                             </Button>
                    
                     </Card>
-
+                </Col>
+            </Row>
                     <Modal
                         show={show}
                         onHide={handleClose}
@@ -49,8 +50,7 @@ const ToolCard = (props) => {
                         </Modal.Footer>
                     </Modal>
                    
-                </Col>
-            </Row>
+            
              <br></br>
         </div>
     )
