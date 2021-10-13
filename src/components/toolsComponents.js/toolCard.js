@@ -16,6 +16,7 @@ const ToolCard = (props) => {
                 <Col>
                     <Card>
                         <Card.Body>
+                        <Card.Img variant="top" src={props.img_url} />
                             <Card.Title>{props.name}</Card.Title>
                                 <Card.Text>
                                     <br/>

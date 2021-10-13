@@ -41,6 +41,7 @@ class ToolsContainer extends React.Component{
                     category_id={t.category_id} 
                     details={t.details} 
                     name={t.name}
+                    img_url={t.img_url}
                     handleRentButton={this.handleRentButton}
                     />
             })
@@ -55,6 +56,7 @@ class ToolsContainer extends React.Component{
                     category_id={t.category_id} 
                     details={t.details} 
                     name={t.name}
+                    img_url={t.img_url}
                     handleRentButton={this.handleRentButton}
                     />
             })

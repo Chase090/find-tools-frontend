@@ -8,9 +8,11 @@ import {
 } from "react-router-dom";
 // --------------
 import Navigation from './components/navigation';
-import ToolsContainer from './containers/toolsContainer'
+// import ToolsContainer from './containers/toolsContainer'
 import Home from './components/home';
 import ToolsForm from './components/toolsComponents.js/toolForm';
+import {Layout} from './components/appLayout';
+import {Toolindex} from './components/toolsComponents.js/toolIndex';
 
 
 
@@ -20,27 +22,33 @@ class App extends React.Component {
   render() {
     
     return (
-      <Router>
-        <div className="App">
-          <Navigation />
-          <div className="Content">
-            <Switch>
-              <Route exact path="/">
-                <Home />
-              </Route>
+      <div className="App">
+        <Layout>
+          <Router>
+            <Navigation />
+            <div className="Content">
+              <Switch>
+                <Route exact path="/">
+                 <Home />
+                </Route>
 
-              <Route exact path= "/tools">
-                <ToolsContainer />
-              </Route>
+                <Route exact path= "/tools">
+                 <Toolindex />
+                </Route>
 
-              <Route path="/tools/new">
-         <ToolsForm />
-              </Route>
+                <Route path="/tools/new">
+                  <ToolsForm />
+                </Route>
 
-            </Switch>
-          </div>
-        </div>
-      </Router>
+                <Route path="/about">
+                  <ToolsForm />
+                </Route>
+
+              </Switch>
+            </div>
+          </Router>
+        </Layout>
+      </div>
     )
   }
 }

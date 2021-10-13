@@ -47,54 +47,72 @@ class ToolsForm extends React.Component{
                 <Container>
                     <br></br>
                     <Form onSubmit={this.handleOnSubmit}>
-                        <Row>
-                            <Col>
-                                <Form.Group className="mb-3" controlId="formBasicToolName">                  
-                                    <FloatingLabel label="Tool Name" className="mb-3">
-                                        <Form.Control 
-                                            placeholder="Tool Name"
-                                            name="name"
-                                            value={this.state.name}
-                                            onChange={this.handleOnChange}
+                        
+                            
+                        <Form.Group className="mb-3" controlId="formBasicToolName">                  
+                            <FloatingLabel label="Tool Name" className="mb-3">
+                                <Form.Control 
+                                    placeholder="Tool Name"
+                                    name="name"
+                                    value={this.state.name}
+                                    onChange={this.handleOnChange}
 
-                                        />
-                                    </FloatingLabel>
-                                </Form.Group>
-                            </Col>
+                                />
+                            </FloatingLabel>
+                        </Form.Group>
 
-                            <Col>
-                                <Form.Group className="mb-3" controlId="formBasicPrice">
-                                    <FloatingLabel label="Price">
-                                        <Form.Control 
-                                            placeholder="Price" 
-                                            type="number" 
-                                            min="0.00" 
-                                            max="10000.00" 
-                                            step="1.00" 
-                                            name="price"
-                                            value={this.state.price}
-                                            onChange={this.handleOnChange}
-                                        />
-                                    </FloatingLabel>
-                                </Form.Group>
-                            </Col>
-                                
-                                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                                    <FloatingLabel label="Details">
-                                        <Form.Control 
-                                            as="textarea" 
-                                            rows={3} 
-                                            placeholder="Details" 
-                                            name="details"
-                                            value={this.state.details}
-                                            onChange={this.handleOnChange}
-                                        />
-                                    </FloatingLabel>
-                                </Form.Group>
-                            <Col>
-                                <Button variant="primary" type="submit">Submit</Button>
-                            </Col>
-                        </Row>  
+                    
+                        <Form.Group className="mb-3" controlId="formBasicPrice">
+                            <FloatingLabel label="Price">
+                                <Form.Control 
+                                    placeholder="Price" 
+                                    type="number" 
+                                    min="0.00" 
+                                    max="10000.00" 
+                                    step="1.00" 
+                                    name="price"
+                                    value={this.state.price}
+                                    onChange={this.handleOnChange}
+                                />
+                            </FloatingLabel>
+                        </Form.Group>
+                    
+
+                        <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                            <FloatingLabel label="Image Url">
+                                <Form.Control 
+                                    as="textarea" 
+                                    rows={3} 
+                                    placeholder="Image Url" 
+                                    name ="image_url"
+                                    value={this.state.image_url}
+                                    onChange={this.handleOnChange}
+                                />
+                            </FloatingLabel>
+                        </Form.Group>
+                    
+                    
+                        <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                            <FloatingLabel label="Details">
+                                <Form.Control 
+                                    as="textarea" 
+                                    rows={3} 
+                                    placeholder="Details" 
+                                    name="details"
+                                    value={this.state.details}
+                                    onChange={this.handleOnChange}
+                                />
+                            </FloatingLabel>
+                        </Form.Group>
+                                            
+                    
+                    
+                    
+
+                    
+                        <Button variant="primary" type="submit">Submit</Button>
+                    
+                
                     </Form>
                 </Container>
 
