@@ -10,7 +10,7 @@ class ToolsForm extends React.Component{
         name: "",
         details: "",
         price: "",
-        image_url: ""
+        img_url: ""
     }
 
     handleOnChange = (e) => {
@@ -33,7 +33,7 @@ class ToolsForm extends React.Component{
             name: "",
             details: "",
             price: "",
-            image_url: ""
+            img_url: ""
         })
     }
 
@@ -83,9 +83,9 @@ class ToolsForm extends React.Component{
                                 <Form.Control 
                                     as="textarea" 
                                     rows={3} 
-                                    placeholder="Image Url" 
-                                    name ="image_url"
-                                    value={this.state.image_url}
+                                    placeholder="img Url" 
+                                    name ="img_url"
+                                    value={this.state.img_url}
                                     onChange={this.handleOnChange}
                                 />
                             </FloatingLabel>

@@ -2,6 +2,8 @@ import React from "react";
 import {Container} from "react-bootstrap";
 
 import { connect } from "react-redux";
+
+
 import { fetchTools } from "../actions/ToolsActions";
 import ToolCard from "../components/toolsComponents.js/toolCard";
 import { Form, FormControl } from 'react-bootstrap'
@@ -10,6 +12,7 @@ class ToolsContainer extends React.Component{
     
     
     componentDidMount(){
+        
         this.props.fetchTools()
     }
     
@@ -27,7 +30,7 @@ class ToolsContainer extends React.Component{
 
 
     renderFilteredOrRenderList() {
-
+console.log(this.props.tools)
         if(this.state.query !== "") {
         const toolsFiltered = this.props.tools.filter(tool => tool.name.toLowerCase().includes(this.state.query.toLowerCase()))
 

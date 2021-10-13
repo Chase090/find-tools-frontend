@@ -1,5 +1,9 @@
 # Getting Started with Create React App
 
+ToolsFind Backend: https://github.com/Chase090/find-tools-backend
+
+Blog Post: https://ce072114.medium.com/react-project-and-everything-redux-about-it-ba3c576213fa
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
