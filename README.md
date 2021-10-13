@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+Video: https://youtu.be/0rhy9o3mpbY
+
 ToolsFind Backend: https://github.com/Chase090/find-tools-backend
 
 Blog Post: https://ce072114.medium.com/react-project-and-everything-redux-about-it-ba3c576213fa
