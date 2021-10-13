@@ -8,11 +8,11 @@ import {
 } from "react-router-dom";
 // --------------
 import Navigation from './components/navigation';
-// import ToolsContainer from './containers/toolsContainer'
-import Home from './components/home';
+import Home from './components/homeComponents/home';
 import ToolsForm from './components/toolsComponents.js/toolForm';
 import {Layout} from './components/appLayout';
 import {Toolindex} from './components/toolsComponents.js/toolIndex';
+import { About } from './components/aboutComponents/about';
 
 
 
@@ -41,7 +41,7 @@ class App extends React.Component {
                 </Route>
 
                 <Route path="/about">
-                  <ToolsForm />
+                  <About />
                 </Route>
 
               </Switch>

@@ -39,11 +39,14 @@ class ToolsContainer extends React.Component{
                     price={t.price}      
                     available={t.available} 
                     category_id={t.category_id} 
-                    details={t.details} 
+                    
                     name={t.name}
                     img_url={t.img_url}
                     handleRentButton={this.handleRentButton}
                     />
+                    
+
+                    
             })
         } else {
             const tooList = this.props.tools
@@ -79,6 +82,7 @@ class ToolsContainer extends React.Component{
                             aria-label="Search"
                         />
                     </Form>
+
                 </div>
                     <br></br>
                 <div className="toolcard">

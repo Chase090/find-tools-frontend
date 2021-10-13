@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { deletedTool } from "../../actions/ToolsActions";
 
 
+
 const ToolCard = (props) => {
     const [show, setShow] = useState(false);
 
@@ -26,6 +27,7 @@ const ToolCard = (props) => {
                             ${props.price} 
                             <Button onClick={handleShow} variant="primary" size="sm">Rent!
                             </Button>
+                   
                     </Card>
 
                     <Modal
