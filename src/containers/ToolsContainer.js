@@ -4,7 +4,7 @@ import {Container} from "react-bootstrap";
 import { connect } from "react-redux";
 
 
-import { fetchTools, updatedTool } from "../actions/ToolsActions";
+import { fetchTools, updateTool } from "../actions/ToolsActions";
 import ToolCard from "../components/toolsComponents.js/toolCard";
 import { Form, FormControl } from 'react-bootstrap'
 
@@ -30,8 +30,9 @@ class ToolsContainer extends React.Component{
 
     handleRentButton = (id) => {
         const matched = this.props.tools.find(tool => tool.id === id)
-        const updatedMatch 
-
+        const updatedMatch = {...matched, available: matched.available === false}
+            // debugger
+        this.props.updateTool(updatedMatch)
     }
 
 
@@ -107,9 +108,10 @@ class ToolsContainer extends React.Component{
 
 
 const mapStateToProps = (state) => {
+    console.log(state.tools.tools)
         return{
             tools: state.tools.tools
         }
     }
-export default connect (mapStateToProps, {fetchTools})(ToolsContainer)
+export default connect (mapStateToProps, {fetchTools, updateTool})(ToolsContainer)
 

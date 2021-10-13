@@ -3,7 +3,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { fetchTools } from "../actions/ToolsActions";
 import ToolCard from "../components/toolsComponents.js/toolCard";
-
+import AvailableCard from "../components/toolsComponents.js/availableCard";
 
 
 
@@ -19,7 +19,7 @@ class AvailableTools extends React.Component{
             return tool.available === false
         })
         return toDisplay.map(t => {
-            return <ToolCard
+            return <AvailableCard
             key={t.id}
             id={t.id}
             price={t.price}      

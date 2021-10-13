@@ -6,7 +6,7 @@ export function toolsReducer(state = {tools: [], marked: []}, action) {
 
         case "UPDATE_TOOL":
             const cheese =  state.tools.filter(tool => tool.id !== action.payload.id)
-            const whiz = {...state, tools: cheese, marked: action.payload}
+            const whiz = {...state, tools: cheese}
             return whiz
 
         case "DELETE_TOOL":

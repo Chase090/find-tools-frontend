@@ -26,7 +26,7 @@ const AvailableCard = (props) => {
                                 </Card.Text>
                         </Card.Body>  
                             ${props.price} 
-                            <Button onClick={handleShow} variant="primary" size="sm">Rent!
+                            <Button onClick={handleShow} variant="primary" size="sm">Remove
                             </Button>
                    
                     </Card>
@@ -42,7 +42,7 @@ const AvailableCard = (props) => {
                             <Modal.Title>Rent Out</Modal.Title>
                         </Modal.Header>
                         <Modal.Body>
-                            Are you sure?
+                            You're about to remove Rental. Are you sure?
                         </Modal.Body>
                         <Modal.Footer>
                             <Button variant="secondary" onClick={handleClose}>Close</Button>

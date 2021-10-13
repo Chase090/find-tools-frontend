@@ -46,7 +46,7 @@ const ToolCard = (props) => {
                         </Modal.Body>
                         <Modal.Footer>
                             <Button variant="secondary" onClick={handleClose}>Close</Button>
-                            <Button onClick={() => {props.deletedTool(props.id); handleClose();}} variant="primary">Proceed</Button>
+                            <Button onClick={() => {props.handleRentButton(props.id); handleClose();}} variant="primary">Proceed</Button>
                         </Modal.Footer>
                     </Modal>
                    

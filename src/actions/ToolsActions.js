@@ -52,19 +52,19 @@ export const createTool = (tool) => {
 export const updateTool = (tool) => {
     return(dispatch) => {
        const configobj = {
-           method: 'POST',
-           headers: { 'content-type': 'application/json'},
+           method: 'PATCH',
+           headers: { 'content-type': 'application/json', Accept: "application/json"},
            body: JSON.stringify(tool)
        } 
 
-       fetch(url + `${tool.id}`, configobj)
+       fetch(url + `/${tool.id}`, configobj)
        .then(res => res.json())
        .then(data => {
-        //    debugger
+           debugger
             const toolObj = {id: parseInt(data.data.id), ...data.data.attributes}
 
 
-            dispatch(deletedTool(toolObj))
+            dispatch(updatedTool(toolObj))
        })
     }
 }
