@@ -5,7 +5,7 @@ import { deletedTool } from "../../actions/ToolsActions";
 
 
 
-const AvailableCard = (props) => {
+const RentedCard = (props) => {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -13,7 +13,9 @@ const AvailableCard = (props) => {
 
 
     return(
+    
         <div>
+            <br></br>
             <Row xs={1} md={2} className="g-4">
                 <Col>
                     <Card style={{ width: '18rem' }}>
@@ -56,5 +58,5 @@ const AvailableCard = (props) => {
     )
 }
 
-export default connect(null, {deletedTool})(AvailableCard)
+export default connect(null, {deletedTool})(RentedCard)
 

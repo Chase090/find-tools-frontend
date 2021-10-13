@@ -3,12 +3,12 @@ import React from "react";
 import { connect } from "react-redux";
 import { fetchTools } from "../actions/ToolsActions";
 import ToolCard from "../components/toolsComponents.js/toolCard";
-import AvailableCard from "../components/toolsComponents.js/availableCard";
+import RentedCard from "../components/toolsComponents.js/rentedCard";
 
 
 
 
-class AvailableTools extends React.Component{
+class RentedTools extends React.Component{
 
     componentDidMount(){
         this.props.fetchTools()
@@ -19,7 +19,7 @@ class AvailableTools extends React.Component{
             return tool.available === false
         })
         return toDisplay.map(t => {
-            return <AvailableCard
+            return <RentedCard
             key={t.id}
             id={t.id}
             price={t.price}      
@@ -52,4 +52,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect (mapStateToProps, {fetchTools})(AvailableTools)
+export default connect (mapStateToProps, {fetchTools})(RentedTools)

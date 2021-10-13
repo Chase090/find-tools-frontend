@@ -60,7 +60,7 @@ export const updateTool = (tool) => {
        fetch(url + `/${tool.id}`, configobj)
        .then(res => res.json())
        .then(data => {
-           debugger
+           
             const toolObj = {id: parseInt(data.data.id), ...data.data.attributes}
 
 

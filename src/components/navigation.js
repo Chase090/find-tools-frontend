@@ -1,6 +1,7 @@
 import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { DropdownNav } from "./dropdownNav";
 
 
 const Navigation = () => {
@@ -16,9 +17,8 @@ const Navigation = () => {
                     navbarScroll>
 
                     <Nav.Link as={Link} to='/'>Home</Nav.Link>
-                    <Nav.Link as={Link} to='/tools/new'>Create</Nav.Link>
                     <Nav.Link as={Link} to='/tools'>Tools</Nav.Link>
-                    <Nav.Link as={Link} to='/about'>About</Nav.Link>
+                        <DropdownNav />
 
                 </Nav>
 
