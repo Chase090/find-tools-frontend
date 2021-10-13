@@ -13,6 +13,7 @@ import ToolsForm from './components/toolsComponents.js/toolForm';
 import {Layout} from './components/appLayout';
 import {Toolindex} from './components/toolsComponents.js/toolIndex';
 import { About } from './components/aboutComponents/about';
+import AvailableTools from './containers/availableTools';
 
 
 
@@ -34,6 +35,7 @@ class App extends React.Component {
 
                 <Route exact path= "/tools">
                  <Toolindex />
+                
                 </Route>
 
                 <Route path="/tools/new">
@@ -41,7 +43,7 @@ class App extends React.Component {
                 </Route>
 
                 <Route path="/about">
-                  <About />
+                  <About /> <AvailableTools/>
                 </Route>
 
               </Switch>

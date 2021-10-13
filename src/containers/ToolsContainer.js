@@ -30,7 +30,7 @@ class ToolsContainer extends React.Component{
 
 
     renderFilteredOrRenderList() {
-console.log(this.props.tools)
+// console.log(this.props.tools)
         if(this.state.query !== "") {
         const toolsFiltered = this.props.tools.filter(tool => tool.name.toLowerCase().includes(this.state.query.toLowerCase()))
 
@@ -105,3 +105,4 @@ const mapStateToProps = (state) => {
         }
     }
 export default connect (mapStateToProps, {fetchTools})(ToolsContainer)
+
