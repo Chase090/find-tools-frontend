@@ -9,7 +9,7 @@ const ToolCard = (props) => {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    // console.log(props)
+    console.log(props.children)
     return(
         <div>
             <Row>
