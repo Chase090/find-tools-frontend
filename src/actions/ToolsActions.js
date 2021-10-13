@@ -6,6 +6,8 @@ export const deleteTool = (id) => ({type: "DELETE_TOOL", payload: id})
 
 export const addTool = (tool) => ({type: "CREATE_TOOL", payload: tool})
 
+export const updatedTool = (tool) => ({type: "UPDATE_TOOL", payload: tool})
+
 
 export const fetchTools = () => {
     return (dispatch) => {
@@ -44,5 +46,25 @@ export const createTool = (tool) => {
        fetch(url, configobj)
        .then(res => res.json())
        .then(data => {dispatch(addTool(data))})
+    }
+}
+// --------------
+export const updateTool = (tool) => {
+    return(dispatch) => {
+       const configobj = {
+           method: 'POST',
+           headers: { 'content-type': 'application/json'},
+           body: JSON.stringify(tool)
+       } 
+
+       fetch(url + `${tool.id}`, configobj)
+       .then(res => res.json())
+       .then(data => {
+        //    debugger
+            const toolObj = {id: parseInt(data.data.id), ...data.data.attributes}
+
+
+            dispatch(deletedTool(toolObj))
+       })
     }
 }

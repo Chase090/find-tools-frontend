@@ -4,7 +4,7 @@ import {Container} from "react-bootstrap";
 import { connect } from "react-redux";
 
 
-import { fetchTools } from "../actions/ToolsActions";
+import { fetchTools, updatedTool } from "../actions/ToolsActions";
 import ToolCard from "../components/toolsComponents.js/toolCard";
 import { Form, FormControl } from 'react-bootstrap'
 
@@ -30,7 +30,8 @@ class ToolsContainer extends React.Component{
 
     handleRentButton = (id) => {
         const matched = this.props.tools.find(tool => tool.id === id)
-        
+        const updatedMatch 
+
     }
 
 
