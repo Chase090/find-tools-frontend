@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { fetchTools } from "../actions/ToolsActions";
 import ToolCard from "../components/toolsComponents.js/toolCard";
 import RentedCard from "../components/toolsComponents.js/rentedCard";
-
+import { Container } from "react-bootstrap";
 
 
 
@@ -38,9 +38,16 @@ class RentedTools extends React.Component{
 
     render(){
         return(
-            <div className="available-cars">
-                {this.displayUnavailable()}
-            </div>
+            <>
+                 <h1>Your Rented List</h1>
+                 <br></br>
+                <Container>
+                    
+                <div className="rented-tools">
+                    {this.displayUnavailable()}
+                </div>
+                </Container>
+            </>
         )
     }
 }
