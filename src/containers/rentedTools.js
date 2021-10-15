@@ -2,7 +2,7 @@ import React from "react";
 
 import { connect } from "react-redux";
 import { fetchTools } from "../actions/ToolsActions";
-import ToolCard from "../components/toolsComponents.js/toolCard";
+
 import RentedCard from "../components/toolsComponents.js/rentedCard";
 import { Container } from "react-bootstrap";
 
@@ -32,7 +32,6 @@ class RentedTools extends React.Component{
             />
             
         })
-        console.log(toDisplay)
     }
 
 

@@ -29,9 +29,9 @@ class ToolsContainer extends React.Component{
 
 
     handleRentButton = (id) => {
+        debugger
         const matched = this.props.tools.find(tool => tool.id === id)
         const updatedMatch = {...matched, available: matched.available === false}
-            // debugger
         this.props.updateTool(updatedMatch)
     }
 

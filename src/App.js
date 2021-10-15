@@ -28,7 +28,7 @@ class App extends React.Component {
           <Router>
             <Navigation />
             <div className="Content">
-              <Switch>
+              
                 <Route exact path="/">
                  <Home />
                 </Route>
@@ -50,7 +50,7 @@ class App extends React.Component {
                  <RentedTools/>
                 </Route>
 
-              </Switch>
+
             </div>
           </Router>
         </Layout>
