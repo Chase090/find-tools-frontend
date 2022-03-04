@@ -9,7 +9,7 @@ import { Provider } from 'react-redux'
 import reportWebVitals from './reportWebVitals';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import rootReducer from './reducers';
-import { toolsReducer } from './reducers/ToolsReducer';
+
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';

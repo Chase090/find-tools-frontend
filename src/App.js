@@ -49,6 +49,7 @@ class App extends React.Component {
                 <Route path="/rented">
                  <RentedTools/>
                 </Route>
+                
 
 
             </div>

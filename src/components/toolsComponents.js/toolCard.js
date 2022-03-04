@@ -7,6 +7,7 @@ import { deletedTool } from "../../actions/ToolsActions";
 
 const ToolCard = (props) => {
     const [show, setShow] = useState(false);
+    const [showMore, setShowMore] = useState(false)
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -22,7 +23,11 @@ const ToolCard = (props) => {
                             <Card.Title>{props.name}</Card.Title>
                                 <Card.Text>
                                     <br/>
-                                    {props.details}
+                                    {showMore ? props.details : `${props.details.substring(0, 75)}`}
+                                    <span 
+                                    variant="secondary"
+                                    size="sm"
+                                    onClick={() => setShowMore(!showMore)}>{showMore ? "Show less" : "...show more"}</span>
                                 </Card.Text>
                         </Card.Body>  
                             ${props.price} 

@@ -16,7 +16,7 @@ export const fetchTools = () => {
         .then(data => {
             const tools = data.data
             const toolsArray = []
-
+          
             tools.map(tool => {
                 return toolsArray.push({...tool.attributes, id: parseInt(tool.id)})
             })

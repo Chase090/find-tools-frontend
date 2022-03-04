@@ -12,8 +12,9 @@ class ToolsContainer extends React.Component{
     
     
     componentDidMount(){
-        
+        console.log("a")
         this.props.fetchTools()
+        console.log("b")
     }
     
     state = {
@@ -113,5 +114,7 @@ const mapStateToProps = (state) => {
             tools: state.tools.tools
         }
     }
+
+    
 export default connect (mapStateToProps, {fetchTools, updateTool})(ToolsContainer)
 
